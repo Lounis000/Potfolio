@@ -8,25 +8,30 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { ProjectDetails } from './components/ProjectDetails';
+import { FeedbacksPage } from './components/FeedbacksPage';
+import { FeedbackProvider } from './context/FeedbackContext';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Banner />
-              <Skills />
-              <Projects />
-            </>
-          } />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects/:id" element={<ProjectDetails />} />
-        </Routes>
-        <Footer />
-      </div>
+      <FeedbackProvider>
+        <div className="App">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Banner />
+                <Skills />
+                <Projects />
+              </>
+            } />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/projects/:id" element={<ProjectDetails />} />
+            <Route path="/feedbacks" element={<FeedbacksPage />} />
+          </Routes>
+          <Footer />
+        </div>
+      </FeedbackProvider>
     </Router>
   );
 }

@@ -10,14 +10,14 @@ const projects = [
   {
     id: 1,
     title: "Plateforme de Formation en ligne",
-    description: "Description détaillée de la Plateforme de Formation en ligne.",
+    description: "c'est une plateforme de cours en ligne comme Udemy et openClasseroom l'utilisateur dois faire une demande d'inscription au cours puis le gestionnaire valideras l'inscription.",
     technologies: ["React", "Node.js", "Bootstrap"],
     images: [projImg1, projImg2, projImg3]
   },
   {
     id: 2,
     title: "Application de gestion D'entrepot",
-    description: "Description détaillée de l'Application de gestion D'entrepot.",
+    description: "c'est une application desktop pouer un entrepot de cannabis.",
     technologies: ["HTML", "CSS", "JavaScript"],
     images: [projImg1, projImg2, projImg3]
   },
