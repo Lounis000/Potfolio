@@ -8,7 +8,6 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { ProjectDetails } from './components/ProjectDetails';
-import { FeedbacksPage } from './components/FeedbacksPage'; // Importer le composant FeedbacksPage
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
           } />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects/:id" element={<ProjectDetails />} />
-          <Route path="/feedbacks" element={<FeedbacksPage />} /> {/* Ajouter la route FeedbacksPage */}
         </Routes>
         <Footer />
       </div>
