@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import '../App.css'; // Assurez-vous d'importer les styles
+import '../App.css'; 
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -14,7 +14,7 @@ export const Contact = () => {
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState('Envoyer');
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
