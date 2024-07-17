@@ -1,49 +1,50 @@
+// backend/server.js
 const express = require('express');
+const bodyParser = require('body-parser');
 const fs = require('fs');
-const path = require('path');
 const cors = require('cors');
 
 const app = express();
-const PORT = 5000;
-const feedbacksFilePath = path.join(__dirname, 'feedbacks.json');
-
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 
-// Endpoint pour obtenir tous les feedbacks
+const FEEDBACKS_FILE = './feedbacks.json';
+
+// Lecture des feedbacks depuis le fichier JSON
 app.get('/api/feedbacks', (req, res) => {
-  fs.readFile(feedbacksFilePath, 'utf8', (err, data) => {
+  fs.readFile(FEEDBACKS_FILE, (err, data) => {
     if (err) {
-      res.status(500).send('Erreur lors de la lecture du fichier');
+      console.error('Erreur lors de la lecture du fichier de feedbacks:', err);
+      res.status(500).send('Erreur serveur');
       return;
     }
     res.send(JSON.parse(data));
   });
 });
 
-// Endpoint pour ajouter un feedback
+// Ajout d'un nouveau feedback
 app.post('/api/feedbacks', (req, res) => {
   const newFeedback = req.body;
-  
-  fs.readFile(feedbacksFilePath, 'utf8', (err, data) => {
+  fs.readFile(FEEDBACKS_FILE, (err, data) => {
     if (err) {
-      res.status(500).send('Erreur lors de la lecture du fichier');
+      console.error('Erreur lors de la lecture du fichier de feedbacks:', err);
+      res.status(500).send('Erreur serveur');
       return;
     }
-    
     const feedbacks = JSON.parse(data);
     feedbacks.push(newFeedback);
-    
-    fs.writeFile(feedbacksFilePath, JSON.stringify(feedbacks, null, 2), (err) => {
+    fs.writeFile(FEEDBACKS_FILE, JSON.stringify(feedbacks, null, 2), (err) => {
       if (err) {
-        res.status(500).send('Erreur lors de l\'écriture du fichier');
+        console.error('Erreur lors de l\'écriture du fichier de feedbacks:', err);
+        res.status(500).send('Erreur serveur');
         return;
       }
-      res.status(201).send(newFeedback);
+      res.status(201).send('Feedback ajouté');
     });
   });
 });
 
+const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Serveur démarré sur le port ${PORT}`);
 });

@@ -738,3 +738,164 @@ ul li {
 .star-rating .off .star {
   color: #ccc;
 }
+.footer .social-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+/************ Footer Css ************/
+.footer {
+  padding: 50px 0 20px 0;
+  background-color: #0a0a23; /* Bleu nuit */
+  text-align: center;
+  position: relative;
+}
+
+.footer img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #B8B8B8;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+.footer .social-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer .social-icon a {
+  width: 42px;
+  height: 42px;
+  background: rgba(217, 217, 217, 0.1);
+  display: inline-flex;
+  border-radius: 50%;
+  margin: 0 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.footer .social-icon a::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer .social-icon a:hover::before {
+  transform: scale(1);
+}
+
+.footer .social-icon a img {
+  width: 40%; /* Assurez-vous que cela correspond à la taille dans la navbar */
+  z-index: 1;
+  transition: filter 0.3s ease-in-out;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer .social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+
+/*************** FeedbackForm CSS ************************/
+.feedback-section {
+  background: #FFFFFF;
+  border-radius: 55px;
+  color: #121212;
+  padding: 50px 70px; 
+  margin-bottom: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feedback-section h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.feedback-email-bx {
+  background: transparent;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feedback-email-bx input,
+.feedback-email-bx textarea {
+  width: 100%;
+  color: #121212;
+  font-weight: 500;
+  background: transparent;
+  border: 2px solid; 
+  border-color: #376fe9; 
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.feedback-email-bx input::placeholder,
+.feedback-email-bx textarea::placeholder {
+  color: #ccc;
+}
+
+.feedback-email-bx button {
+  background: linear-gradient(90.21deg, #376fe9 -5.91%, #4eeb2f 111.58%);
+  padding: 20px 65px; 
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 18px;
+  margin-top: 15px;
+  border: none;
+  font-size: 20px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.star-rating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 0 10px;
+}
+
+.star-rating .on .star {
+  color: #ffbf00;
+}
+
+.star-rating .off .star {
+  color: #ccc;
+}

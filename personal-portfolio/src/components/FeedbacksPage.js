@@ -1,13 +1,11 @@
-import React from 'react';
+// src/components/FeedbacksPage.js
+import React, { useContext } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-
-const feedbacks = [
-  { id: 1, name: "John Doe", comment: "Excellent travail !", rating: 5 },
-  { id: 2, name: "Jane Smith", comment: "Très bon développeur.", rating: 4 },
-  // Ajoutez d'autres feedbacks ici
-];
+import { FeedbackContext } from '../context/FeedbackContext';
 
 export const FeedbacksPage = () => {
+  const { feedbacks } = useContext(FeedbackContext);
+
   return (
     <section className="feedbacks-page">
       <Container>
