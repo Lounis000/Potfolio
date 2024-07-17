@@ -89,10 +89,15 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
+  
+
 }
+
+
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
+  
 }
 nav.navbar a.navbar-brand {
     width: 13%;
@@ -302,24 +307,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Skills Css ************/
+/************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 100px 0 50px 0; /* Ajusté le padding en haut pour éviter le chevauchement */
   position: relative;
-  background: transparent
+  background: transparent;
+  margin-top: 70px;
 }
+
 .skill-bx {
-  background: linear-gradient(90deg, #0D98BA 0%, #38ecd4 100%); /* Dégradé linéaire de gauche à droite */
+  background: linear-gradient(90deg, #0D98BA 0%, #38ecd4 100%);
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .skill h2 {
   font-size: 45px;
   font-weight: 700;
-  color: #fff; /* Couleur blanche pour le titre */
+  color: #fff;
 }
+
 .skill p {
   color: #B8B8B8;
   font-size: 18px;
@@ -327,21 +337,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px 0 75px 0;
 }
+
 .skill-slider {
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
+
 .skill-slider .item {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .skill-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2)); /* Ombre portée pour les images */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 }
+
 .background-image-left {
   top: 28%;
   position: absolute;
@@ -412,7 +426,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #1f62dd -5.91%, #4A2FBD 111.58%);
   opacity: 0.85;
   position: absolute;
   width: 100%;

@@ -1,14 +1,15 @@
+// src/components/Footer.js
 import { Container, Row, Col } from "react-bootstrap";
-import { FeedbackForm } from "./FeedbackForm";
+import { FeedbackForm } from "./FeedbackForm";  // Mettre à jour cette ligne
 import logo from "../assets/img/logo-Lounis.svg";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import navIcon1 from '../assets/img/nav-icon1.svg';
+import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/nav-icon4.svg';
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="feedbackForm">
       <Container>
         <Row className="align-items-center">
           <FeedbackForm />

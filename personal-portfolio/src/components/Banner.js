@@ -1,3 +1,4 @@
+// src/components/Banner.js
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/profile.png";
@@ -58,7 +59,9 @@ export const Banner = () => {
                 <span className="tagline">Bienvenue sur mon Portfolio</span>
                 <h1>{`Bonjour! Je suis Lounis Bourouina`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Développeur WeB", "Développeur Mobile", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Je m'appelle Lounis Bourouina j'ai 23 ans je suis diplomé d'une Licence en informatique a l'université Adberrahmane Mira Béjaia, et je suis actuellment étudiant en programmation informatique au collège la cité a Ottawa.Mon expérience m'a permis d'acquérir beaucoup de connaissances dans touts les domaines de l'informatique comme le cyber sécurité, les bases de données, le Développement web et Mobile.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <a href="#feedbackForm">
+                    <button>Notez Moi ! <ArrowRightCircle size={25} /></button>
+                  </a>
               </div>}
             </TrackVisibility>
           </Col>

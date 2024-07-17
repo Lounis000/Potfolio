@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
@@ -8,6 +9,9 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const projects = [
     {

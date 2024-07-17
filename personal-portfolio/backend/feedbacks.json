@@ -1,0 +1,28 @@
+[
+    {
+      "name": "Jean Dupont",
+      "comment": "Super travail, très satisfait !",
+      "rating": 4
+    },
+    {
+      "name": "Marie Curie",
+      "comment": "Bonne expérience, à recommander.",
+      "rating": 3
+    },
+    {
+      "name": "Albert Einstein",
+      "comment": "Travail correct mais peut s'améliorer.",
+      "rating": 3
+    },
+    {
+      "name": "Isaac Newton",
+      "comment": "Bon service, merci beaucoup.",
+      "rating": 3
+    },
+    {
+      "name": "Galileo Galilei",
+      "comment": "Projet bien réalisé, quelques détails à peaufiner.",
+      "rating": 3
+    }
+  ]
+  

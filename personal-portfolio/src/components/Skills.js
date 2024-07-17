@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
@@ -5,12 +6,15 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const responsive = {
     superLargeDesktop: {
-      
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -35,7 +39,7 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Compétences</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Je possède une solide expertise dans le développement web, la création d'applications mobiles et la conception UI/UX. Mon parcours académique et professionnel m'a permis d'acquérir des compétences diversifiées et de réaliser de nombreux projets dans différents domaines.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image" />

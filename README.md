@@ -1,78 +1,71 @@
-# Personal Portfolio
+# Mon Portfolio
 
-## Description
-Ce projet est un portfolio personnel développé pour mettre en valeur les compétences, les projets et les feedbacks des utilisateurs. Le site inclut des sections pour les compétences, les projets, les contacts et un formulaire de feedback permettant aux utilisateurs de laisser des avis et des notes.
+Ce projet est un portfolio personnel développé avec React et Node.js. Il présente mes compétences, mes projets et permet aux utilisateurs de laisser des feedbacks.
 
 ## Fonctionnalités
-- Affichage des compétences et des projets.
-- Formulaire de contact pour permettre aux visiteurs de vous contacter.
-- Système de feedback permettant aux utilisateurs de laisser des notes et des commentaires.
-- Affichage de tous les feedbacks laissés par les utilisateurs.
 
-## Technologies utilisées
-- **Frontend** : React.js, React-Bootstrap
-- **Backend** : Node.js, Express.js
-- **Base de données** : Fichier JSON pour stocker les feedbacks
-- **Autres** : Axios pour les requêtes HTTP, Git pour le contrôle de version
+- Présentation des compétences
+- Liste des projets réalisés
+- Formulaire de contact
+- Section feedbacks avec possibilité d'ajouter des avis
 
 ## Prérequis
-- Node.js installé sur votre machine.
-- Git installé pour cloner le projet.
+
+- Node.js (version 14 ou supérieure)
+- npm ou yarn
 
 ## Installation
-1. Clonez le projet depuis GitHub :
-    ```bash
-    git clone https://github.com/Lounis000/portfolio.git
-    ```
 
-2. Naviguez dans le répertoire du projet :
-    ```bash
-    cd portfolio
-    ```
+1. Clonez le dépôt :
 
-3. Installez les dépendances pour le frontend et le backend :
-    ```bash
-    npm install
-    cd backend
-    npm install
-    cd ..
-    ```
+```bash
+git clone https://github.com/votre-utilisateur/votre-repo.git
+cd votre-repo
+```
+2.Installez les dépendances pour le frontend :
 
-## Utilisation
-1. Démarrez le serveur backend :
-    ```bash
-    cd backend
-    node server.js
-    ```
+```bash
+cd personal-portfolio
+npm install
+```
+3.Installez les dépendances pour le backend :
 
-2. Démarrez le serveur frontend :
-    ```bash
-    npm start
-    ```
+```bash
+cd backend
+npm install
+```
+## Démarrage de l'application
 
-3. Accédez à l'application dans votre navigateur :
-    ```
-    http://localhost:3000
-    ```
+1.Démarrez le serveur backend :
+```bash
+cd backend
+node server.js
+```
+2.Démarrez le serveur frontend :
+```bash
+cd personal-portfolio
+npm start
+```
+
+3.Ouvrez votre navigateur et accédez à http://localhost:3000.
 
 ## Structure du projet
-- `src/` : Contient les fichiers source du frontend.
-- `backend/` : Contient les fichiers source du backend.
-- `src/components/` : Contient les composants React utilisés dans l'application.
-- `src/assets/` : Contient les images et autres assets utilisés dans l'application.
-- `src/context/` : Contient les fichiers de contexte pour la gestion des états globaux.
-- `src/App.js` : Le composant principal de l'application React.
-- `backend/server.js` : Le fichier principal du serveur backend.
 
-## Contribuer
-Les contributions sont les bienvenues ! Si vous avez des idées d'amélioration, des bugs à signaler ou des fonctionnalités à ajouter, n'hésitez pas à ouvrir une issue ou à soumettre une pull request.
+personal-portfolio/: Dossier contenant le code frontend (React)
+backend/: Dossier contenant le code backend (Node.js)
 
-## Auteur
-- **Lounis Bourouina**
-  - [LinkedIn](https://www.linkedin.com/in/lounis-bourouina-431a2b204?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bgx33F1wwQTWJgX%2BXvfx8NA%3D%3D)
-  - [Facebook](https://www.facebook.com/lounis.bourouina.9)
-  - [Instagram](https://www.instagram.com/lounis_bourouina/)
-  - [GitHub](https://github.com/Lounis000)
+## API
 
-## Licence
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+GET /feedbacks: Récupère tous les feedbacks
+POST /feedbacks: Ajoute un nouveau feedback
+POST /contact: Envoie un message de contact
+
+## Contribution
+
+## License
+
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+
+## Auteur 
+
+Lounis Bourouina.

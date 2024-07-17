@@ -4,6 +4,10 @@ import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import projImg1 from "../assets/img/LBFORMA.png";
 import projImg2 from "../assets/img/p1.png";
 import projImg3 from "../assets/img/p2.png";
+import projImg4 from "../assets/img/GesCannabis.png";
+import projImg5 from "../assets/img/p5.png";
+import projImg6 from "../assets/img/p6.png";
+import projImg7 from "../assets/img/p7.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const projects = [
@@ -19,7 +23,7 @@ const projects = [
     title: "Application de gestion D'entrepot",
     description: "c'est une application desktop pouer un entrepot de cannabis.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    images: [projImg1, projImg2, projImg3]
+    images: [projImg4, projImg5, projImg6,projImg7]
   },
 ];
 

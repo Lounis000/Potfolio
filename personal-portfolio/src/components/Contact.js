@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
@@ -6,6 +6,10 @@ import TrackVisibility from 'react-on-screen';
 import '../App.css'; // Assurez-vous d'importer les styles
 
 export const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const formInitialDetails = {
     firstName: '',
     lastName: '',
@@ -14,7 +18,7 @@ export const Contact = () => {
     message: ''
   }
   const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState('Envoyer');
   const [status, setStatus] = useState({});
 
   const onFormUpdate = (category, value) => {
@@ -60,7 +64,7 @@ export const Contact = () => {
               <TrackVisibility>
                 {({ isVisible }) =>
                   <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                    <h2>Get In Touch</h2>
+                    <h2>Contact</h2>
                     <form onSubmit={handleSubmit}>
                       <Row>
                         <Col size={12} sm={6} className="px-1">

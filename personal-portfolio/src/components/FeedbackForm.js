@@ -9,7 +9,7 @@ export const FeedbackForm = () => {
   const [rating, setRating] = useState(0);
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
-  const { feedbacks, setFeedbacks } = useContext(FeedbackContext);
+  const { addFeedback } = useContext(FeedbackContext);
 
   const validateForm = () => {
     const newErrors = {};
@@ -18,12 +18,13 @@ export const FeedbackForm = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
-      const newFeedback = { id: feedbacks.length + 1, name, comment, rating };
-      setFeedbacks([...feedbacks, newFeedback]);
+      const newFeedback = { name, comment, rating };
+      console.log('Envoi du feedback:', newFeedback);  // Ajout de log
+      await addFeedback(newFeedback);
       setSubmitted(true);
       setName('');
       setComment('');

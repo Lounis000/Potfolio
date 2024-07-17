@@ -14,8 +14,8 @@ export const FeedbacksPage = () => {
             <h2>Feedbacks</h2>
             <p>Voici tous les feedbacks laissés par nos utilisateurs :</p>
             <div className="feedbacks-container">
-              {feedbacks.map(feedback => (
-                <div key={feedback.id} className="feedback-item">
+              {feedbacks.map((feedback, index) => (
+                <div key={index} className="feedback-item">
                   <strong>{feedback.name}</strong>
                   <p>{feedback.comment}</p>
                   <div className="star-rating-display">
